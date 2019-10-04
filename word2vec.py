@@ -145,7 +145,7 @@ class word2vec():
             word = self.index_word[i]
             word_sim[word] = theta
 
-        words_sorted = sorted(word_sim.items(), key=lambda(word, sim):sim, reverse=True)
+        words_sorted = sorted(word_sim.items(), key=lambda word, sim :sim, reverse=True)
 
         for word, sim in words_sorted[:top_n]:
             print word, sim
@@ -169,7 +169,7 @@ class word2vec():
             word = self.index_word[i]
             word_sim[word] = theta
 
-        words_sorted = sorted(word_sim.items(), key=lambda(word, sim):sim, reverse=True)
+        words_sorted = sorted(word_sim.items(), key=lambda word, sim :sim, reverse=True)
 
         for word, sim in words_sorted[:top_n]:
             print word, sim
