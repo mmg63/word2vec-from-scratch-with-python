@@ -120,7 +120,7 @@ class word2vec():
                 self.loss += -np.sum([u[word.index(1)] for word in w_c]) + len(w_c) * np.log(np.sum(np.exp(u)))
                 #self.loss += -2*np.log(len(w_c)) -np.sum([u[word.index(1)] for word in w_c]) + (len(w_c) * np.log(np.sum(np.exp(u))))
                 
-            print 'EPOCH:',i, 'LOSS:', self.loss
+            print ('EPOCH:',i, 'LOSS:', self.loss)
         pass
 
 
@@ -148,7 +148,7 @@ class word2vec():
         words_sorted = sorted(word_sim.items(), key=lambda(word, sim):sim, reverse=True)
 
         for word, sim in words_sorted[:top_n]:
-            print word, sim
+            print( word, sim)
             
         pass
 
@@ -172,7 +172,7 @@ class word2vec():
         words_sorted = sorted(word_sim.items(), key=lambda(word, sim):sim, reverse=True)
 
         for word, sim in words_sorted[:top_n]:
-            print word, sim
+            print( word, sim)
             
         pass
 
